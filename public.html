@@ -15,9 +15,12 @@
     <!-- Hero Section -->
     <header class="bg-primary text-white text-center py-5">
       <div class="container">
-	<h1 class="display-4">Public BDSIM public talks, posters and presentations</h1>
+	<h1 class="display-4">Public talks, posters and presentations</h1>
       </div>
     </header>
+
+    <div id="navbar"></div>		         
+      
 
     <section id="Papers" class="container mt-5">
       <h2>Papers</h2>
@@ -103,6 +106,14 @@
     <section id="Posters" class="container mt-5">
       <h3>Posters</h3>
     </section>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+	  $("#navbar").load("navbar.html");
+    });
+    </script>
   </body>
   
 </html>

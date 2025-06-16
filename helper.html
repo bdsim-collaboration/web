@@ -18,6 +18,8 @@
 	<h1 class="display-4">Public BDSIM resources</h1>
       </div>
     </header>
+
+    <div id="navbar"></div>
     
     <section id="pybdsim" class="container mt-5">
       <h2>Pybdsim</h2>
@@ -68,7 +70,15 @@
 	</div>
       </div>
     </section>          
-    
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+          $("#navbar").load("navbar.html");
+    });
+    </script>    
+
   </body>
   
 </html>
