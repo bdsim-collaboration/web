@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://bdsim-collaboration.github.io/web/sitemap.xml
