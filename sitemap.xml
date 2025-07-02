@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://https:/bdsim-collaboration.github.io/navbar.html</loc>
+    <loc>https://https:/bdsim-collaboration.github.io/web/navbar.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://https:/bdsim-collaboration.github.io/index.html</loc>
+    <loc>https://https:/bdsim-collaboration.github.io/web/index.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://https:/bdsim-collaboration.github.io/about.html</loc>
+    <loc>https://https:/bdsim-collaboration.github.io/web/about.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://https:/bdsim-collaboration.github.io/helper.html</loc>
+    <loc>https://https:/bdsim-collaboration.github.io/web/helper.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://https:/bdsim-collaboration.github.io/contact.html</loc>
+    <loc>https://https:/bdsim-collaboration.github.io/web/contact.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://https:/bdsim-collaboration.github.io/public.html</loc>
+    <loc>https://https:/bdsim-collaboration.github.io/web/public.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://https:/bdsim-collaboration.github.io/docker.html</loc>
+    <loc>https://https:/bdsim-collaboration.github.io/web/docker.html</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://https:/bdsim-collaboration.github.io/web/googlef0b31f3403fdd00c.html</loc>
     <lastmod>2025-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
