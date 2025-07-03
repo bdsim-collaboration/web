@@ -2,7 +2,7 @@ import os
 from urllib.parse import urljoin
 import datetime
 
-base_url = "https://https://bdsim-collaboration.github.io/web/"
+base_url = "https://bdsim-collaboration.github.io/web/"
 html_dir = "./"  # your local directory of HTML files
 
 urls = []
