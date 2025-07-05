@@ -2,50 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bdsim-collaboration.github.io/web/navbar.html</loc>
-    <lastmod>2025-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-07-05</lastmod>
   </url>
   <url>
     <loc>https://bdsim-collaboration.github.io/web/index.html</loc>
-    <lastmod>2025-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-07-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bdsim-collaboration.github.io/web/applications.html</loc>
+    <lastmod>2025-07-05</lastmod>
   </url>
   <url>
     <loc>https://bdsim-collaboration.github.io/web/about.html</loc>
-    <lastmod>2025-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-07-05</lastmod>
   </url>
   <url>
     <loc>https://bdsim-collaboration.github.io/web/helper.html</loc>
-    <lastmod>2025-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-07-05</lastmod>
   </url>
   <url>
     <loc>https://bdsim-collaboration.github.io/web/contact.html</loc>
-    <lastmod>2025-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-07-05</lastmod>
   </url>
   <url>
     <loc>https://bdsim-collaboration.github.io/web/public.html</loc>
-    <lastmod>2025-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-07-05</lastmod>
   </url>
   <url>
     <loc>https://bdsim-collaboration.github.io/web/docker.html</loc>
-    <lastmod>2025-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-07-05</lastmod>
   </url>
   <url>
     <loc>https://bdsim-collaboration.github.io/web/googlef0b31f3403fdd00c.html</loc>
-    <lastmod>2025-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-07-05</lastmod>
   </url>
 </urlset>
