@@ -3,13 +3,15 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="keywords" content="physics, accelerator, particles, BDSIM, beam, delivery, simulation, Geant4, backgrounds, losses, 3D, monte, carlo, docker, container, artifacts, library, binary">
+    <meta name="description" content="Beam Delivery Simulation BDSIM docker containers and MacOS library artifacts">    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <title>Beam Delivery Simulation (BDSIM)</title>
+    <title>Beam Delivery Simulation BDSIM docker operation</title>
   </head>
   <body>
     
@@ -22,12 +24,13 @@
 
     <div id="navbar"></div>
 
-    <section id="base-docker" class="container mt-5">
-      <p>Docker images are avaible to building BDSIM. The base OS images are </p>
+    <section id="docker" class="container mt-5">
+      <h2>Docker images</h2>
+      <p>Docker images are available help build BDSIM. The base OS images are </p>
       
       <ul>
-	<li> centos 8 </li>
-	<li> alma 9 </li>
+	<li> Centos 8 </li>
+	<li> Alma 9 </li>
 	<li> Ubuntu 20 LTS</li>
 	<li> Ubuntu 22 LTS</li>
 	<li> Ubuntu 24 LTS</li>
@@ -36,14 +39,48 @@
       <p> For each of these operating systems multiple Geant4 versions are built </p>
 
       <ul>
-	<li> Geant4 10.7
-	<li> Geant4 11.0
-	<li> Geant4 11.1
-	<li> Geant4 11.2
-	<li> Geant4 11.3
+	<li> Geant4 10.7 </li>
+	<li> Geant4 11.0 </li>
+	<li> Geant4 11.1 </li>
+	<li> Geant4 11.2 </li>
+	<li> Geant4 11.3.2 </li>
+	<li> Geant4 11.3.2 with QT/graphics </li>
       </ul>
+
+      <p>All the dockerfiles to create the containers are publically available <a href="https://github.com/bdsim-collaboration/docker">BDSIM docker files</a> and built as a GitHub action</p>
+      
+      <h4>Using BDSIM <a href="https://hub.docker.com/orgs/bdsim/repositories?_gl=1*5sbdvj*_gcl_au*MzE5MTUwMDA2LjE3NDc5\
+MzM4OTU.*_ga*MTg3OTE4MjQzNC4xNzQ3NzgyNjMw*_ga_XJWPQMJYHQ*czE3NTE4MDU2MDgkbzIwJGcxJHQxNzUxODA1NzI3JGozJGwwJGgw">docker images</a></h4>
+
+      <p>To pull a docker image, here the ubuntu24 Geant4.11.3.2 with Qt/Graphics</p>
+      <pre class="bg-light p-3 rounded"><code>docker pull bdsim/ubuntu24-g4.11.3-graphics</code></pre>
+
+      <p>To run the docker container</p>
+      <pre class="bg-light p-3 rounded"><code>docker run -ti bdsim/ubuntu24-g4.11.3-graphics</code></pre>      
+
+
+      <h4>Graphics from docker container on mac</h4>
+      <p>X-quartz and docker (i.e OpenGL over Xwindows) does not appear to work for BDSIM visualisation on Mac</p>
+
+      <p>To run VNC from within container</p>
+      <pre class="bg-light p-3 rounded"><code>$host> xhost +
+$host> docker run -p 5900:5900 -ti bdsim/ubuntu24-g4.11.3-graphics
+$container> Xvfb :1 -screen 0 1024x768x24 &
+$container> export DISPLAY=:1
+$container> x11vnc -display :1
+$container> fvwm &
+$container> xterm &</code></pre>            
+
+      <p>Then from your host computer use a VNC client to access <code>localhost:5900</code>
     </section>
 
+    
+    <section id="docker" class="container mt-5">
+      <h2>Mac <a href="https://github.com/bdsim-collaboration/mac_geant4/releases">geant4 artifacts</a></h2>
+      <p>Geant4 built against homebrew is available as a side effect of speeding up the mac os testing process. 
+    </section>    
+
+    
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
