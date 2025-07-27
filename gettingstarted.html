@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="physics, accelerator, particles, BDSIM, beam, delivery, simulation, Geant4, backgrounds, losses, 3D, monte, carlo, docker, container, artifacts, library, binary">
+    <meta name="description" content="Beam Delivery Simulation BDSIM docker containers and MacOS library artifacts">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Beam Delivery Simulation BDSIM getting started</title>
+  </head>
+  <body>
+    
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+	<h1 class="display-4">Getting started</h1>
+      </div>
+    </header>
+
+    <div id="navbar"></div>
+
+    <!-- Tab Navigation -->
+    <section id="gettingstarted" class="container mt-5">    
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+	<li class="nav-item" role="presentation">
+	  <button class="nav-link active" id="conda-tab" data-bs-toggle="tab"
+		  data-bs-target="#conda-content" type="button" role="tab">Conda</button>
+	</li>
+	<li class="nav-item" role="presentation">
+	  <button class="nav-link" id="docker-tab" data-bs-toggle="tab"
+		  data-bs-target="#docker-content" type="button" role="tab">Docker</button>
+	</li>
+	<li class="nav-item" role="presentation">
+	  <button class="nav-link" id="compilation-tab" data-bs-toggle="tab"
+		  data-bs-target="#compilation-content" type="button" role="tab">Compilation</button>
+	</li>
+	<li class="nav-item" role="presentation">
+	  <button class="nav-link" id="cvmfs-tab" data-bs-toggle="tab"
+		  data-bs-target="#cvmfs-content" type="button" role="tab">CVMFS</button>
+	</li>		
+      </ul>
+    </section>
+    
+    <!-- Tab Content -->
+    <section id="gettingstarted" class="container mt-5">        
+      <div class="tab-content mt-3" id="gettingstarted-content">
+	<div class="tab-pane fade show active" id="conda-content" role="tabpanel">
+	  <h4>Conda</h4>
+	  <p>Installing BDSIM from Conda</p>
+	  <ul>
+	    <li> Install <a href="https://www.anaconda.com/docs/getting-started/miniconda/main">miniconda</a> for your system</li>
+	    <li> Create conda environment for BDSIM, e.g. 
+	      <pre><code>conda create --name bdsim</code></pre>
+	    <li> Activate conda bdsim environment e.g. 
+	      <pre><code>conda activate bdsim</code></pre>	      	      
+	    <li> Install BDSIM from conda <a href="https://anaconda.org/conda-forge/bdsim-g4">bdsim-g4</a> package
+	      <pre><code>conda install bdsim-g4</code></pre>
+	    <li>Run BDSIM
+	      <pre><code>bdsim --file={{GMAD FILE}}</code></pre>	      
+	  </ul>
+	</div>
+	<div class="tab-pane fade" id="docker-content" role="tabpanel">
+	  <h4>Docker</h4>
+	  <ul>
+	    <li>Install <a href="https://www.docker.com/products/docker-desktop/">Docker desktop</a> for your OS
+	    <li>
+	      Pull docker image
+	      <pre><code>docker pull bdsim/alma9-g4.11.3-bdsim:develop</code></pre>
+	    </li>
+	    <li>Determine your IP address
+	      <pre><code>ifconfig/ipconfig</code></pre>
+	    </li>
+	    <li>Enable XWindows access in the host
+	      <pre><code>xhost +</code></pre>
+	    <li> Start container
+	      <pre><code>docker run -ti  bdsim/alma9-g4.11.3-bdsim:develop</code></pre>
+	    <li>Set display variable in container
+	      <pre><code>export DISPLAY={{IP ADDRESS}}</code></pre>
+	    <li>Run BDSIM
+	      <pre><code>bdsim --file={{GMAD FILE}}</code></pre>
+	  </ul>
+	  <h4>Mac XQuartz</h4>
+	  To enable OpenGL over Xwindows for mac
+	  <ul>
+	    <li> Download and install <a href="https://www.xquartz.org">XQuartz</a>
+	    <li> Enable OpenGL in XQuartz
+	      <pre><code>defaults write org.xquartz.X11 enable_iglx -bool true</code></pre></li>
+	    <li> restart xquartz
+	  </ul>
+	  <h4>VNC</h4>
+	  VNC XServer. Occasionally OpenGL for Geant4 visualisation fails.
+	  
+	  <pre><code>$host> xhost +
+$host> docker run -p 5900:5900 -ti alma9-g4.11.3-bdsim:develop
+$container> Xvfb :1 -screen 0 1024x768x24 &
+$container> export DISPLAY=:1
+$container> x11vnc -display :1
+$container> fvwm &
+$container> xterm &
+	  </code></pre>
+	</div>
+	<div class="tab-pane fade" id="compilation-content" role="tabpanel">
+	  <p>Compilation</p>
+	</div>	
+	<div class="tab-pane fade" id="cvmfs-content" role="tabpanel">
+	  <p>CVMFS</p>
+	</div>	
+      </div>
+</div>
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+          $("#navbar").load("navbar.html");
+    });
+    </script>
+    
+  </body>
+  
+</html>
