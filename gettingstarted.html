@@ -3,8 +3,8 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="keywords" content="physics, accelerator, particles, BDSIM, beam, delivery, simulation, Geant4, backgrounds, losses, 3D, monte, carlo, docker, container, artifacts, library, binary">
-    <meta name="description" content="Beam Delivery Simulation BDSIM docker containers and MacOS library artifacts">    
+    <meta name="keywords" content="physics, accelerator, particles, BDSIM, beam, delivery, simulation, Geant4, backgrounds, losses, 3D, monte, carlo, docker, container, artifacts, library, binary, conda, getting started">
+    <meta name="description" content="Beam Delivery Simulation BDSIM getting started guide">    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -59,7 +59,7 @@
 	    <li> Activate conda bdsim environment e.g. 
 	      <pre><code>conda activate bdsim</code></pre>	      	      
 	    <li> Install BDSIM from conda <a href="https://anaconda.org/conda-forge/bdsim-g4">bdsim-g4</a> package
-	      <pre><code>conda install bdsim-g4</code></pre>
+	      <pre><code>conda install bdsim-g4 -c conda-forge</code></pre>
 	    <li>Run BDSIM
 	      <pre><code>bdsim --file={{GMAD FILE}}</code></pre>	      
 	  </ul>
