@@ -27,89 +27,128 @@
     <!-- Tab Navigation -->
     <section id="gettingstarted" class="container mt-5">    
       <ul class="nav nav-tabs" id="myTab" role="tablist">
-	<li class="nav-item" role="presentation">
-	  <button class="nav-link active" id="conda-tab" data-bs-toggle="tab"
-		  data-bs-target="#conda-content" type="button" role="tab">Conda</button>
-	</li>
-	<li class="nav-item" role="presentation">
-	  <button class="nav-link" id="docker-tab" data-bs-toggle="tab"
-		  data-bs-target="#docker-content" type="button" role="tab">Docker</button>
-	</li>
-	<li class="nav-item" role="presentation">
-	  <button class="nav-link" id="compilation-tab" data-bs-toggle="tab"
-		  data-bs-target="#compilation-content" type="button" role="tab">Compilation</button>
-	</li>
-	<li class="nav-item" role="presentation">
-	  <button class="nav-link" id="cvmfs-tab" data-bs-toggle="tab"
-		  data-bs-target="#cvmfs-content" type="button" role="tab">CVMFS</button>
-	</li>		
-      </ul>
+		  <li class="nav-item" role="presentation">
+			  <button class="nav-link active" id="environment-tab" data-bs-toggle="tab"
+					  data-bs-target="#environment-content" type="button" role="tab">Environment</button>
+		  </li>
+		  <li class="nav-item" role="presentation">
+		  <button class="nav-link" id="conda-tab" data-bs-toggle="tab"
+			  data-bs-target="#conda-content" type="button" role="tab">Conda</button>
+		  </li>
+		  <li class="nav-item" role="presentation">
+			  <button class="nav-link" id="docker-tab" data-bs-toggle="tab"
+					  data-bs-target="#docker-content" type="button" role="tab">Docker</button>
+		  </li>
+		  <li class="nav-item" role="presentation">
+			  <button class="nav-link" id="compilation-tab" data-bs-toggle="tab"
+					  data-bs-target="#compilation-content" type="button" role="tab">Compilation</button>
+		  </li>
+		  <li class="nav-item" role="presentation">
+			  <button class="nav-link" id="cvmfs-tab" data-bs-toggle="tab"
+					  data-bs-target="#cvmfs-content" type="button" role="tab">CVMFS</button>
+		  </li>
+	  </ul>
     </section>
     
     <!-- Tab Content -->
     <section id="gettingstarted" class="container mt-5">        
       <div class="tab-content mt-3" id="gettingstarted-content">
-	<div class="tab-pane fade show active" id="conda-content" role="tabpanel">
-	  <h4>Conda</h4>
-	  <p>Installing BDSIM from Conda</p>
-	  <ul>
-	    <li> Install <a href="https://www.anaconda.com/docs/getting-started/miniconda/main">miniconda</a> for your system</li>
-	    <li> Create conda environment for BDSIM, e.g. 
-	      <pre><code>conda create --name bdsim</code></pre>
-	    <li> Activate conda bdsim environment e.g. 
-	      <pre><code>conda activate bdsim</code></pre>	      	      
-	    <li> Install BDSIM from conda <a href="https://anaconda.org/conda-forge/bdsim-g4">bdsim-g4</a> package
-	      <pre><code>conda install bdsim-g4 -c conda-forge</code></pre>
-	    <li>Run BDSIM
-	      <pre><code>bdsim --file={{GMAD FILE}}</code></pre>	      
-	  </ul>
+		  <div class="tab-pane fade show active" id="environment-content" role="tabpanel">
+			  <h4>Complete environment</h4>
+			  <ul>
+				  <li> If using conda create/activate an environment</li>
+				  <li> Install or obtain BDSIM (from conda, docker, from source or CVMFS)</li>
+				  <li> Install ROOT
+					  <ul>
+						  <li><pre><code>(brew/yum/apt/conda) install ROOT</code></pre></li>
+					  </ul>
+ 				  <li> Install helper packages
+					  <ul>
+						  <li><pre><code>pip install --name pybdsim pandas</code></pre></li>
+					  </ul>
+			      </li>
+				  <li> Test
+					  <pre><code>terminal> bdsim --file={{GMAD file}} --outfile={{OUTPUT file}} --ngenerate=100 --batch</code></pre>
+					  <pre><code>teriminal>ipython --pylab</code></pre>
+				      <pre><code>python> import pybdsim</code></pre>
+					  <pre><code>python> d = pybdsim.DataPandas..BDSIMOutput({OUTPUT file}})</code></pre>
+				  </li>
+				  <li> If your are using conda BDSIM you'll need to set the following variables
+					  <pre><code>export BDSIM={{ location of BDSIM dir }}</code></pre>
+					  <pre><code>export ROOT_INCLUDE_PATH=${ROOT_INCLUDE_PATH}:$BDSIM/include/bdsim/:$BDSIM/include/bdsim/analysis/:$BDSIM/include/bdsim/parser/</code></pre>
+				  </li>
+			  </ul>
+		  </div>
+	<div class="tab-pane fade show" id="conda-content" role="tabpanel">
+		<h4>Conda</h4>
+		<p>Installing BDSIM from Conda</p>
+		<ul>
+			<li> Install <a href="https://www.anaconda.com/docs/getting-started/miniconda/main">miniconda</a> for your system</li>
+			<li> Create conda environment for BDSIM, e.g.
+				<pre><code>conda create --name bdsim</code></pre></li>
+			<li> Activate conda bdsim environment e.g.
+				<pre><code>conda activate bdsim</code></pre></li>
+			<li> Install BDSIM from conda <a href="https://anaconda.org/conda-forge/bdsim-g4">bdsim-g4</a> package
+				<pre><code>conda install bdsim-g4 -c conda-forge</code></pre></li>
+			<li>Run BDSIM
+				<pre><code>bdsim --file={{GMAD FILE}}</code></pre></li>
+		</ul>
 	</div>
-	<div class="tab-pane fade" id="docker-content" role="tabpanel">
-	  <h4>Docker</h4>
-	  <ul>
-	    <li>Install <a href="https://www.docker.com/products/docker-desktop/">Docker desktop</a> for your OS
-	    <li>
-	      Pull docker image
-	      <pre><code>docker pull bdsim/alma9-g4.11.3-bdsim:develop</code></pre>
-	    </li>
-	    <li>Determine your IP address
-	      <pre><code>ifconfig/ipconfig</code></pre>
-	    </li>
-	    <li>Enable XWindows access in the host
-	      <pre><code>xhost +</code></pre>
-	    <li> Start container
-	      <pre><code>docker run -ti  bdsim/alma9-g4.11.3-bdsim:develop</code></pre>
-	    <li>Set display variable in container
-	      <pre><code>export DISPLAY={{IP ADDRESS}}:0</code></pre>
-	    <li>Run BDSIM
-	      <pre><code>bdsim --file={{GMAD FILE}}</code></pre>
-	  </ul>
-	  <h4>Mac XQuartz</h4>
-	  To enable OpenGL over Xwindows for mac
-	  <ul>
-	    <li> Download and install <a href="https://www.xquartz.org">XQuartz</a>
-	    <li> Enable OpenGL in XQuartz
-	      <pre><code>defaults write org.xquartz.X11 enable_iglx -bool true</code></pre></li>
-	    <li> restart xquartz
-	  </ul>
-	  <h4>VNC</h4>
-	  VNC XServer. Occasionally OpenGL for Geant4 visualisation fails.
-	  
-	  <pre><code>$host> xhost +
+		  <div class="tab-pane fade" id="docker-content" role="tabpanel">
+			  <h4>Docker</h4>
+			  <ul>
+				  <li>Install <a href="https://www.docker.com/products/docker-desktop/">Docker desktop</a> for your OS</li>
+				  <li>
+					  Pull docker image
+					  <pre><code>docker pull bdsim/alma9-g4.11.3-bdsim:develop</code></pre>
+				  </li>
+				  <li>Determine your IP address
+					  <pre><code>ifconfig/ipconfig</code></pre>
+				  </li>
+				  <li>Enable XWindows access in the host
+					  <pre><code>xhost +</code></pre>
+				  <li> Start container
+				  <pre><code>docker run -ti  bdsim/alma9-g4.11.3-bdsim:develop</code></pre>
+				  <li>Set display variable in container
+				  <pre><code>export DISPLAY={{IP ADDRESS}}:0</code></pre>
+				  <li>Run BDSIM
+				  <pre><code>bdsim --file={{GMAD FILE}}</code></pre>
+			  </ul>
+			  <h4>Mac XQuartz</h4>
+			  To enable OpenGL over Xwindows for mac
+			  <ul>
+				  <li> Download and install <a href="https://www.xquartz.org">XQuartz</a>
+				  <li> Enable OpenGL in XQuartz
+				  <pre><code>defaults write org.xquartz.X11 enable_iglx -bool true</code></pre></li>
+				  <li> restart xquartz
+			  </ul>
+			  <h4>VNC</h4>
+			  VNC XServer. Occasionally OpenGL for Geant4 visualisation fails.
+			  <pre><code>$host> xhost +
 $host> docker run -p 5900:5900 -ti alma9-g4.11.3-bdsim:develop
 $container> Xvfb :1 -screen 0 1024x768x24 &
 $container> export DISPLAY=:1
 $container> x11vnc -display :1
 $container> fvwm &
-$container> xterm &
-	  </code></pre>
-	</div>
-	<div class="tab-pane fade" id="compilation-content" role="tabpanel">
-	  <p>Compilation</p>
-	</div>	
-	<div class="tab-pane fade" id="cvmfs-content" role="tabpanel">
-	  <p>CVMFS</p>
-	</div>	
+$container> xterm &</code></pre>
+		  </div>
+		  <div class="tab-pane fade" id="compilation-content" role="tabpanel">
+			  <h4>Compilation</h4>
+			  <p>Requires various dependencies (CLHEP, Geant4, Xerces, Qt) </p>
+			  <ul>
+				  <li><pre><code>terminal> git clone git@github.com:bdsim-collaboration/bdsim.git</code></pre></li>
+				  <li><pre><code>terminal> mkdir build</code></pre></li>
+				  <li><pre><code>terminal> mkdir install</code></pre></li>
+				  <li><pre><code>terminal> cd build</code></pre></li>
+				  <li><pre><code>terminal> cmake ../bdsim --DCMAKE_INSTALLPREFIX=../install</code></pre></li>
+				  <li><pre><code>terminal> make install</code></pre></li>
+				  <li><pre><code>terminal> source ../instal/bin/bdsim.sh</code></pre></li>
+			  </ul>
+		  </div>
+		  <div class="tab-pane fade" id="cvmfs-content" role="tabpanel">
+			  <h4>CVMFS</h4>
+			  Comming soon!
+		  </div>
       </div>
 </div>
     
