@@ -56,221 +56,231 @@
 	  transform: rotate(-45deg);
       }
     </style>
-    <title>Beam Delivery Simulation - BDSIM</title>
+    <title>Beam Delivery Simulation (BDSIM) </title>
 
   </head>
   <body>
+  	<header class="bg-primary text-white text-center py-5">
+		<div class="container">
+			<h1 class="display-4">Beam Delivery Simulation - BDSIM </h1>
+		</div>
+	</header>
 
-    <header class="bg-primary text-white text-center py-5">
-      <div class="container">
-        <h1 class="display-4">Beam Delivery Simulation - BDSIM </h1>
-      </div>
-    </header>    
-    <div id="navbar"></div>    
-
+	<div id="navbar"></div>
 
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
-      <!-- Indicators (dots) -->
-      <div class="carousel-indicators">
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4"></button>
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5"></button>
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6"></button>
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7"></button>
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="8"></button>	
-      </div>
-      
+		<!-- Indicators (dots) -->
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7"></button>
+			<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="8"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<!-- Image and Text Row -->
+				<div class="row align-items-center justify-content-center">
+					<!-- Image Column -->
+					<div class="col-md-5">
+						<img src="images/hero_features.png" class="img-fluid rounded" alt="BDSIM quadrupole with vacuum and in material tracking">
+					</div>
 
-      <div class="carousel-inner">
+					<!-- Text Column -->
+					<div class="col-md-5">
+						<h2>Features of BDSIM</h2>
+						<ul>
+							<li><strong>Matrix vacuum tracking</strong></li>
+							<li><string>Full Geant4 tracking in material</strong></li>
+							<li>Full transformation of input/output to accelerator coordinates</li>
+							<li>Powerful ROOT output</li>
+							<li>Conversion tools for MAD-X, MAD-8, Transport</li>
+							<li>Python analysis tools and optics calculations in pybdsim</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
-	<div class="carousel-item active">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/hero_features.png" class="img-fluid rounded" alt="BDSIM quadrupole with vacuum and in material tracking">
-	    </div>	    
-	    
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	      <h2>Features of BDSIM</h2>
-	      <ul>
-		<li><strong>Matrix vacuum tracking</strong></li>
-		<li><string>Full Geant4 tracking in material</strong></li>
-		<li>Full transformation of input/output to accelerator coordinates</li>
-		<li>Powerful ROOT output</li>
-		<li>Conversion tools for MAD-X, MAD-8, Transport</li>
-		<li>Python analysis tools and optics calculations in pybdsim</li>
-	      </ul>
-	    </div>
-	  </div>
+			<div class="carousel-item">
+				<!-- Image and Text Row -->
+				<div class="row align-items-center justify-content-center">
+					<!-- Image Column -->
+					<div class="col-md-5">
+						<img src="images/hero_faser.png" class="img-fluid rounded" alt="BDSIM rendering of LHC ATLAS IP from FASER">
+					</div>
+
+					<!-- Text Column -->
+					<div class="col-md-5">
+						<h2>Applications of BDSIM</h2>
+						<ul>
+							<li>High energy physics</li>
+							<li>Free electron lasers</li>
+							<li>Energy recovery linacs</li>
+							<li>Future circular collider (FCC)</li>
+							<li>International linear collider</li>
+							<li>Muon collider</li>
+							<li><b>FASER</b>, FPF, SHIP</li>
+							<li>Medical accelerators</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<!-- Image and Text Row -->
+				<div class="row align-items-center justify-content-center">
+					<!-- Image Column -->
+					<div class="col-md-5">
+						<img src="images/hero_tunnel_event.png" class="img-fluid rounded" alt="Sample Image">
+					</div>
+
+					<!-- Text Column -->
+					<div class="col-md-5">
+						<h2>Full capabilities of Geant4</h2>
+						<p class="lead">
+							Geant4 is a widely tested and capable Monte Carlo Radiation Transport code
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<!-- Image and Text Row -->
+				<div class="row align-items-center justify-content-center">
+					<!-- Image Column -->
+					<div class="col-md-5">
+						<img src="images/hero_input.png"
+							 class="img-fluid rounded"
+							 alt="Simple BDSIM gmad input to create a small simulation">
+					</div>
+
+					<!-- Text Column -->
+					<div class="col-md-5">
+						<h2>Simple input syntax</h2>
+						<p class="lead">Most simulations can be created using gmad, mad(8/x) input syntax
+							to build simulations. There is no need to know C++ typically needed when
+							developing Geant4 applications
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<!-- Image and Text Row -->
+				<div class="row align-items-center justify-content-center">
+					<!-- Image Column -->
+					<div class="col-md-5">
+						<img src="images/hero_extend.png"
+							 class="img-fluid rounded"
+							 alt="Screenshot of the BDSIM source code in Clion">
+					</div>
+
+					<!-- Text Column -->
+					<div class="col-md-5">
+						<h2>Extendible in C++</h2>
+						<p class="lead">BDSIM is completely open source and new features can be added
+							using flexbility of C++
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<!-- Image and Text Row -->
+				<div class="row align-items-center justify-content-center">
+					<!-- Image Column -->
+					<div class="col-md-5">
+						<img src="images/hero_acc_cutaway.png"
+							 class="img-fluid rounded"
+							 alt="Sample Image">
+					</div>
+
+					<!-- Text Column -->
+					<div class="col-md-5">
+						<h2>Library of generic 3D accelerator components</h2>
+						<p class="lead">
+							BDSIM provides a set of generic accelerator components like bends,
+							quadrupoles etc.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<!-- Image and Text Row -->
+				<div class="row align-items-center justify-content-center">
+					<!-- Image Column -->
+					<div class="col-md-5">
+						<img src="images/hero_tunnel.png" class="img-fluid rounded" alt="Sample Image">
+					</div>
+
+					<!-- Text Column -->
+					<div class="col-md-5">
+						<h2>Easily add surrounding geometry</h2>
+						<p class="lead">
+							A BDSIM simulation is not just of the accelerator material but also important
+							surrounding material like the tunnel or shielding.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<!-- Image and Text Row -->
+				<div class="row align-items-center justify-content-center">
+					<!-- Image Column -->
+					<div class="col-md-5">
+						<img src="images/hero_geometry.png"
+							 class="img-fluid rounded"
+							 alt="Example pyg4ometry generated GDML geometry from CAD">
+					</div>
+
+					<!-- Text Column -->
+					<div class="col-md-5">
+						<h2>Add complex CAD geometry</h2>
+						<p class="lead">
+							Custom GDML geometry can be created using pyg4ometry and added to
+							BDSIM simulatations.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item">
+				<!-- Image and Text Row -->
+				<div class="row align-items-center justify-content-center">
+					<!-- Image Column -->
+					<div class="col-md-5">
+						<img src="images/hero_dataanalysis.png" class="img-fluid rounded" alt="BDSIM visualisation of a simple accelerator with the parallel world used to hold samplers and curvilinear coordinate transforms">
+					</div>
+
+					<!-- Text Column -->
+					<div class="col-md-5">
+						<h2>Powerful ROOT based analysis</h2>
+						<p class="lead">
+							Simulation output can be recorded in accelerator curvilinear
+							coordingates, at planes (samplers) or
+							quantities can be measured in scoring meshes.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Controls (arrows) -->
+		<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
 	</div>
-		
-	<div class="carousel-item">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/hero_faser.png" class="img-fluid rounded" alt="BDSIM rendering of LHC ATLAS IP from FASER">
-	    </div>	    
-
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	      <h2>Applications of BDSIM</h2>
-	      <ul>
-		<li>High energy physics</li>
-		<li>Free electron lasers</li>
-		<li>Energy recovery linacs</li>
-		<li>Future circular collider (FCC)</li>
-		<li>International linear collider</li>
-		<li>Muon collider</li>
-		<li><b>FASER</b>, FPF, SHIP</li>
-		<li>Medical accelerators</li>
-	      </ul>
-	    </div>
-	  </div>
-	</div>
-
-	<div class="carousel-item">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/hero_tunnel_event.png" class="img-fluid rounded" alt="Sample Image">
-	    </div>	    
-
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	      <h2>Full capabilities of Geant4</h2>
-	      <p class="lead">
-		Geant4 is a widely tested and capable Monte Carlo Radiation Transport code
-	      </p>
-	    </div>
-	  </div>
-	</div>
-		
-	<div class="carousel-item">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/hero_input.png" class="img-fluid rounded" alt="Simple BDSIM gmad input to create a small simulation">
-	    </div>	    
-
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	      <h2>Simple input syntax</h2>
-	      <p class="lead">Most simulations can be created using gmad, mad(8/x) input syntax to build simulations.
-		There is no need to know C++ typically needed when developing Geant4 applications</p>
-	    </div>
-	  </div>
-	</div>
-
-	<div class="carousel-item">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/hero_extend.png" class="img-fluid rounded" alt="Screenshot of the BDSIM source code in Clion">
-	    </div>	    
-
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	      <h2>Extendible in C++</h2>
-	      <p class="lead">BDSIM is completely open source and new features can be added using flexbility of C++ 
-	    </div>
-	  </div>
-	</div>		
-	
-	<div class="carousel-item">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/hero_acc_cutaway.png" class="img-fluid rounded" alt="Sample Image">
-	    </div>	    
-	  
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	    <h2>Library of generic 3D accelerator components</h2>
-	    <p class="lead">
-	      BDSIM provides a set of generic accelerator components like bends, quadrupoles etc. 
-	    </p>
-	    </div>
-	  </div>
-	</div>
-	
-	<div class="carousel-item">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/hero_tunnel.png" class="img-fluid rounded" alt="Sample Image">
-	    </div>
-	    
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	      <h2>Easily add surrounding geometry</h2>
-	      <p class="lead">
-		A BDSIM simulation is not just of the accelerator material but also important surrounding material like
-		the tunnel or shielding.
-	      </p>
-	    </div>
-	  </div>
-	</div>
-
-
-	<div class="carousel-item">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/hero_geometry.png" class="img-fluid rounded" alt="Example pyg4ometry generated GDML geometry from CAD">
-	    </div>
-	    
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	      <h2>Add complex CAD geometry</h2>
-	      <p class="lead">
-		Custom GDML geometry can be created using pyg4ometry and added to BDSIM simulatations.
-	      </p>
-	    </div>
-	  </div>
-	</div>	
-
-	<div class="carousel-item">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/hero_dataanalysis.png" class="img-fluid rounded" alt="BDSIM visualisation of a simple accelerator with the parallel world used to hold samplers and curvilinear coordinate transforms">
-	    </div>
-	    
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	      <h2>Powerful ROOT based analysis</h2>
-	      <p class="lead"> Simulation output can be recorded in accelerator curvilinear coordingates, at planes (samplers) or
-		quantities can be measured in scoring meshes.
-	      </p>
-	    </div>
-	  </div>
-	</div>
-	
-      </div>
-      
-      <!-- Controls (arrows) -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-	<span class="carousel-control-prev-icon"></span>
-	<span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-	<span class="carousel-control-next-icon"></span>
-	<span class="visually-hidden">Next</span>
-      </button>
-    </div>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -282,4 +292,4 @@
     </script>
   </body>
 </html>
-B
+
