@@ -50,48 +50,83 @@
 
     <header class="bg-primary text-white text-center py-5">
       <div class="container">
-        <h1 class="display-4">Applications of Beam Delivery Simulation - BDSIM </h1>
+        <h1 class="display-4">Applications of BDSIM </h1>
       </div>
-    </header>    
+    </header>
+
     <div id="navbar"></div>    
 
-
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
-      <!-- Indicators (dots) -->
-      <div class="carousel-indicators">
-	<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
-      </div>
-      
+        <!-- Indicators (dots) -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+        </div>
 
-      <div class="carousel-inner">
+        <div class="carousel-inner">
 
-	<div class="carousel-item active">	
-	  <!-- Image and Text Row -->
-	  <div class="row align-items-center justify-content-center">
-	    <!-- Image Column -->
-	    <div class="col-md-5">
-	      <img src="images/blank_1300x1300.png" class="img-fluid rounded" alt="Sample Image">
-	    </div>	    
-	    
-	    <!-- Text Column -->
-	    <div class="col-md-5">
-	      <h2>Proton beam therapy</h2>
-	    </div>
-	  </div>
-	</div>
-      </div>
-      
-      <!-- Controls (arrows) -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-	<span class="carousel-control-prev-icon"></span>
-	<span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-	<span class="carousel-control-next-icon"></span>
-	<span class="visually-hidden">Next</span>
-      </button>
+            <div class="carousel-item active">
+                <!-- Image and Text Row -->
+                <div class="row align-items-center justify-content-center">
+                    <!-- Image Column -->
+                    <div class="col-md-5">
+                        <img src="images/short_crystal_application.png" class="img-fluid rounded" alt="Sample Image">
+                    </div>
+
+                    <!-- Text Column -->
+                    <div class="col-md-5">
+                        <h2>Crystal Channeling with BDSIM</h2>
+                        <p>
+                            BDSIM provides detailed simulation capabilities for bent crystals used in collimation
+                            systems and other types of beam control. The code models processes such as channeling,
+                            dechanneling, volume capture, and volume reflection, enabling realistic studies of beam–crystal
+                            interactions. These effects are essential for assessing the performance of crystal-assisted
+                            collimation schemes in high-energy accelerators. The plot below illustrates an angular scan of
+                            a crystal collimator, showing the angular kick as a function of the relative incoming angle of
+                            each particle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <!-- Image and Text Row -->
+                <div class="row align-items-center justify-content-center">
+                    <!-- Image Column -->
+                    <div class="col-md-5">
+                        <img src="images/collimation_application.png" class="img-fluid rounded" alt="Sample Image">
+                    </div>
+
+                    <!-- Text Column -->
+                    <div class="col-md-5">
+                        <h2>Collimation Studies with BDSIM</h2>
+                        <p>
+                            BDSIM is widely used to simulate collimation systems and evaluate their cleaning
+                            performance in high-energy accelerators. In a typical setup, particles are tracked
+                            with a dedicated tracking code until they encounter a collimator, at which point
+                            BDSIM is used to model the detailed particle–matter interaction. Secondary particles
+                            produced, or primary particles surviving the interaction, are then passed back to the
+                            tracking code for continued tracking until they are absorbed or lost in the machine
+                            aperture. The plot below shows an example heavy-ion loss map in the LHC, illustrating
+                            how BDSIM can be applied to study the distribution of beam losses and the overall
+                            efficiency of the collimation system.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls (arrows) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
