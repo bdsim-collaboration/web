@@ -81,19 +81,8 @@
             <ul>
                 <li> If using conda create/activate an environment</li>
                 <li> Install or obtain BDSIM (from conda, docker, from source or CVMFS)</li>
-                <li> Install ROOT
-                    <ul>
-                        <li>
-                            <pre><code>(brew/yum/apt/conda) install ROOT</code></pre>
-                        </li>
-                    </ul>
-                <li> Install helper packages
-                    <ul>
-                        <li>
-                            <pre><code>pip install --name pybdsim pandas</code></pre>
-                        </li>
-                    </ul>
-                </li>
+                <li> Install ROOT <pre><code>(brew/yum/apt/conda) install ROOT</code></pre></li>
+                <li> Install helper packages <pre><code>pip install --name pybdsim pandas</code></pre></li>
                 <li> Test
                     <pre><code>terminal> bdsim --file={{GMAD file}} --outfile={{OUTPUT file}} --ngenerate=100 --batch</code></pre>
                     <pre><code>teriminal>ipython --pylab</code></pre>
@@ -144,9 +133,9 @@
                 <li> Start container
                     <pre><code>docker run -ti  bdsim/alma9-g4.11.3-bdsim:develop</code></pre>
                 <li>Set display variable in container
-                    <pre><code>export DISPLAY={{IP ADDRESS}}:0</code></pre>
+                    <pre><code>docker> export DISPLAY={{IP ADDRESS}}:0</code></pre>
                 <li>Run BDSIM
-                    <pre><code>bdsim --file={{GMAD FILE}}</code></pre>
+                    <pre><code>docker> bdsim --file={{GMAD FILE}}</code></pre>
             </ul>
             <h4>Mac XQuartz</h4>
             To enable OpenGL over Xwindows for mac
@@ -181,29 +170,13 @@ $container> xterm &</code></pre>
         <div class="tab-pane fade" id="compilation-content" role="tabpanel">
             <h4>Compilation</h4>
             <p>Requires various dependencies (CLHEP, Geant4, Xerces, Qt) </p>
-            <ul>
-                <li>
-                    <pre><code>terminal> git clone git@github.com:bdsim-collaboration/bdsim.git</code></pre>
-                </li>
-                <li>
-                    <pre><code>terminal> mkdir build</code></pre>
-                </li>
-                <li>
-                    <pre><code>terminal> mkdir install</code></pre>
-                </li>
-                <li>
-                    <pre><code>terminal> cd build</code></pre>
-                </li>
-                <li>
-                    <pre><code>terminal> cmake ../bdsim --DCMAKE_INSTALLPREFIX=../install</code></pre>
-                </li>
-                <li>
-                    <pre><code>terminal> make install</code></pre>
-                </li>
-                <li>
-                    <pre><code>terminal> source ../instal/bin/bdsim.sh</code></pre>
-                </li>
-            </ul>
+            <pre><code>terminal> git clone git@github.com:bdsim-collaboration/bdsim.git</code></pre>
+            <pre><code>terminal> mkdir build</code></pre>
+            <pre><code>terminal> mkdir install</code></pre>
+            <pre><code>terminal> cd build</code></pre>
+            <pre><code>terminal> cmake ../bdsim --DCMAKE_INSTALLPREFIX=../install</code></pre>
+            <pre><code>terminal> make install</code></pre>
+            <pre><code>terminal> source ../install/bin/bdsim.sh</code></pre>
         </div>
         <div class="tab-pane fade" id="cvmfs-content" role="tabpanel">
             <h4>CVMFS</h4>
