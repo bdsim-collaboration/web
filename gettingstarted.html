@@ -78,6 +78,7 @@
     <div class="tab-content mt-3" id="gettingstarted-content">
         <div class="tab-pane fade show active" id="environment-content" role="tabpanel">
             <h4>Complete environment</h4>
+            <p>A complete environment consists of BDSIM, pybdsim and pyROOT to perform analysis.</p>
             <ul>
                 <li> If using conda create/activate an environment</li>
                 <li> Install or obtain BDSIM (from conda, docker, from source or CVMFS)</li>
@@ -97,7 +98,7 @@
         </div>
         <div class="tab-pane fade show" id="conda-content" role="tabpanel">
             <h4>Conda</h4>
-            <p>Installing BDSIM from Conda</p>
+            <p>Installing BDSIM from Conda. Excellent option for quick analysis on personal computing</p>
             <ul>
                 <li> Install <a href="https://www.anaconda.com/docs/getting-started/miniconda/main">miniconda</a> for
                     your system
@@ -171,8 +172,9 @@ $container> xterm &</code></pre>
         </div>
         <div class="tab-pane fade" id="compilation-content" role="tabpanel">
             <h4>Compilation</h4>
-            <p>Mainly for developers or those who wish to add custom code</p>
-            <p>Requires various dependencies (CLHEP, Geant4, Xerces, Qt) </p>
+            <p>Mainly for developers or those who wish to add custom code. Requires various dependencies (CLHEP, Geant4,
+                Xerces, Qt) which can be installed by your system package manager. Good understanding of CMake and compilation
+                is needed</p>
             <pre><code>terminal> git clone git@github.com:bdsim-collaboration/bdsim.git</code></pre>
             <pre><code>terminal> mkdir build</code></pre>
             <pre><code>terminal> mkdir install</code></pre>
