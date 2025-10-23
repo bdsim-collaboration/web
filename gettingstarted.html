@@ -56,6 +56,11 @@
             </button>
         </li>
         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Apptainer-tab" data-bs-toggle="tab"
+                    data-bs-target="#apptainer-content" type="button" role="tab">Apptainer
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
             <button class="nav-link" id="compilation-tab" data-bs-toggle="tab"
                     data-bs-target="#compilation-content" type="button" role="tab">Compilation
             </button>
@@ -161,6 +166,17 @@ $container> export DISPLAY=:1
 $container> x11vnc -display :1
 $container> fvwm &
 $container> xterm &</code></pre>
+        </div>
+        <div class="tab-pane fade" id="apptainer-content" role = "tabpanel">
+            <h4>Apptainer</h4>
+            <ul>
+                <li>Install <a href="https://apptainer.org/docs/admin/main/installation.html">apptainer</a> for your OS  (or verify it is available on your system)</li>
+                <li>Apptainer packages can be found on the GitHub organisation <a href="https://github.com/orgs/bdsim-collaboration/packages">packages</a> page</li>
+                <li>Pull container <pre><code>apptainer pull oras://ghcr.io/bdsim-collaboration/alma9-g4.11.3-bdsim:main</code></pre></li>
+                <li>Run shell container <pre><code>apptainer shell alma9-g4.11.3-bdsim.sif</code></pre></li>
+                <li>Source BDSIM setup <pre><code>apptainer> source /root/.bashrc</code></pre></li>
+                <li>Try to run it<pre><code>apptainer> bdsim --help</code></pre></li>
+                </ul>
         </div>
         <div class="tab-pane fade" id="compilation-content" role="tabpanel">
             <h4>Compilation</h4>
