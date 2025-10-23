@@ -84,10 +84,10 @@
                 <li> Install ROOT <pre><code>(brew/yum/apt/conda) install ROOT</code></pre></li>
                 <li> Install helper packages <pre><code>pip install --name pybdsim pandas</code></pre></li>
                 <li> Test
-                    <pre><code>terminal> bdsim --file={{GMAD file}} --outfile={{OUTPUT file}} --ngenerate=100 --batch</code></pre>
+                    <pre><code>terminal> bdsim --file={{GMAD file}} --outfile={{ OUTPUT file }} --ngenerate=100 --batch</code></pre>
                     <pre><code>teriminal>ipython --pylab</code></pre>
                     <pre><code>python> import pybdsim</code></pre>
-                    <pre><code>python> d = pybdsim.DataPandas..BDSIMOutput({OUTPUT file}})</code></pre>
+                    <pre><code>python> d = pybdsim.DataPandas.BDSIMOutput( {{ OUTPUT file }} )</code></pre>
                 </li>
                 <li> If your are using conda BDSIM you'll need to set the following variables
                     <pre><code>export BDSIM={{ location of BDSIM dir }}</code></pre>
